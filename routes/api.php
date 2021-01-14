@@ -17,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/getcourses','CourseAPIController@index');
+Route::get('/getcoursebyid/{id}','CourseAPIController@show');
+Route::post('/addcourses','CourseAPIController@create');
+Route::delete('/deletecourse/{id}','CourseAPIController@destroy');
+Route::put('/updatecourse/{id}','CourseAPIController@update');
