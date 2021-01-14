@@ -81,18 +81,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                    Laravel 7 REST API
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    Github Repo - <a href="https://github.com/UjalaJha/Laravel7-RestAPI" target="_blank">https://github.com/UjalaJha/Laravel7-RestAPI</a> <br>
+                    PostMan API Collection - <a href="https://www.getpostman.com/collections/1786159494d8648cc53f" target="_blank">https://www.getpostman.com/collections/1786159494d8648cc53f </a> <br>
+                    Get Course - <a href="https://laravel7restapi.herokuapp.com/api/getcourses" target="_blank">https://laravel7restapi.herokuapp.com/api/getcourses </a> <br>
+                    Get Course by ID - <a href="https://laravel7restapi.herokuapp.com/api/getcoursebyid/2" target="_blank">https://laravel7restapi.herokuapp.com/api/getcoursebyid/2 </a> <br>
+                    Delete Course by ID - <a href="https://laravel7restapi.herokuapp.com/api/deletecourse/1" target="_blank">https://laravel7restapi.herokuapp.com/api/deletecourse/1 </a> <br>
+                    Update Course by ID - <a href="https://laravel7restapi.herokuapp.com/api/updatecourse/2" target="_blank">https://laravel7restapi.herokuapp.com/api/updatecourse/2 </a> <br>
+                    Add Course - <a href="https://laravel7restapi.herokuapp.com/api/addcourses" target="_blank">https://laravel7restapi.herokuapp.com/api/addcourses </a> <br>
                 </div>
             </div>
         </div>
