@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Resources\General as GeneralResource;
 use App\Course;
+use Validator;
 
 class CourseAPIController extends Controller
 {
@@ -37,21 +38,36 @@ class CourseAPIController extends Controller
         $course->courseprice = $request->courseprice;
 
 
-        if($course->save())
-        {
-            
-            $dataModel['data'] = $course->id;
-            $dataModel['message'] = "Course Created Successful";
-            $dataModel['error'] = false;
-            return  new GeneralResource($dataModel);
-            
+        $rules = [
+            'coursename' => 'required|unique:course,coursename',
+            'coursecode' => 'required|unique:course,coursecode'
+        ];
+        $validator = Validator::make($request->all(), $rules);
+        if ($validator->fails()) {
+                $dataModel['data'] = null;
+                $dataModel['message'] = $validator->messages();
+                $dataModel['error'] = true;
+                return  new GeneralResource($dataModel);
+
+        }else{
+            if($course->save())
+            {
+                
+                $dataModel['data'] = $course->id;
+                $dataModel['message'] = "Course Created Successful";
+                $dataModel['error'] = false;
+                return  new GeneralResource($dataModel);
+                
+            }
+            else{
+                $dataModel['data'] = null;
+                $dataModel['message'] = "Course Creation Failed";
+                $dataModel['error'] = true;
+                return  new GeneralResource($dataModel);
+            }
         }
-        else{
-            $dataModel['data'] = null;
-            $dataModel['message'] = "Course Creation Failed";
-            $dataModel['error'] = true;
-            return  new GeneralResource($dataModel);
-        }
+        return $response;
+        
         
     }
 
