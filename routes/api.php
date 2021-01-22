@@ -25,9 +25,9 @@ Route::get('/getcoursebyid/{id}','CourseAPIController@show');
 Route::post('/addcourses','CourseAPIController@create');
 Route::delete('/deletecourse/{id}','CourseAPIController@destroy');
 Route::put('/updatecourse/{id}','CourseAPIController@update');
-Route::post('/logout', 'Api\AuthController@logout');
+Route::post('/logout', 'API\AuthController@logout');
 
 });
 
-Route::post('/register', 'Api\AuthController@register');
-Route::post('/login', 'Api\AuthController@login');
+Route::post('/register', 'API\AuthController@register');
+Route::post('/login', 'API\AuthController@login');
